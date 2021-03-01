@@ -18,9 +18,9 @@ void main() {
         ChangeNotifierProvider(create: (_) => NameChangeModel()),
         ChangeNotifierProvider(create: (_) => NameClearModel()),
         ChangeNotifierProvider(
-            create: (_) => FirstModelClass(value: 'First Model Class')),
+            create: (context) => FirstModelClass(value: 'First Model Class')),
         ChangeNotifierProvider(
-            create: (_) => SecondModelClass(
+            create: (context) => SecondModelClass(
                 firstModelClass: FirstModelClass(value: 'Second Model Class'))),
       ],
       // child: FrenchTestApp(),
